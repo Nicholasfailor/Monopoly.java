@@ -1,0 +1,30 @@
+Go
+Properties Mediterranean_Avenue 60 2 Brown 50 0 15 false 50 250
+				monoply.add(new Properties("Baltic Avenue",60,4,"Brown",50,0,20,false,50,450));
+				monoply.add(new RailRoads("Reading RR",200));
+				monoply.add(new Properties("Oriental Avenue",100,6,"Light Blue",50,0,30,false,50,550));
+				monoply.add(new Properties("Vermont Avenue",100,6,"Light Blue",50,0,30,false,50,550));
+				monoply.add(new Properties("Connecticut Avenue",120,8,"Light Blue",50,0,40,false,50,600));
+				monoply.add(new Properties("St. Charles Place",140,10,"Pink",50,0,50,false,50,750));
+				monoply.add(new Utilities("Electric Company",150));
+				monoply.add(new Properties("States Avenue",140,10,"Pink",50,0,50,false,50,750));
+				monoply.add(new Properties("Virginia Avenue",160,12,"Pink",50,0,60,false,50,900));
+				monoply.add(new RailRoads("Pennsylvania RR",200));
+				monoply.add(new Properties("St. James Place",180,14,"Orange",50,0,70,false,50,950));
+Properties Tennessee Avenue",180,14,"Orange",50,0,70,false,50,950));
+Properties New_York_Avenue 200 16 Orange 50 0 80 false 50 1000
+Properties Kentucky_Avenue 220 18 Red 50 0 90 false 50 1050
+Properties Indiana_Avenue 220 18 Red 50 0 90 false 50 1050
+Properties Illinois_Avenue 240 20 Red 50 0 100 false 50 1100
+RailRoads B&O_RR 200
+Properties Atlantic_Avenue 260 22 Yellow 50 0 110 false 50 1150
+Properties Ventnor_Avenue 260 22 Yellow 50 0 110 false 50 1150
+Utilities Water_Works 150
+Properties Marvin_Gardens 280 24 Yellow 50 0 120 false 50 1200
+Properties Pacific_Avenue 300 26 Green 50 0 130 false 50 1275
+Properties North_Carolina_Avenue 300 26 Green 50 0 130 false 50 1275
+Properties Pennsylvania_Avenue 320 28 Green 50 0 150 false 50 1400
+RailRoads Short_Line 200
+Properties Park_Place 350 35 Dark_Blue 50 0 175 false 50 1500
+Properties Boardwalk 400 50 Dark_Blue 50 0 200 false 50 2000
+				players

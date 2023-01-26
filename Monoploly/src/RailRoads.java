@@ -31,7 +31,7 @@ public class RailRoads extends Board
 
 	protected  void countRailRoads()
 	{
-		System.out.println("hello");
+		
 	}
 	
 
