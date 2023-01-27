@@ -65,7 +65,7 @@ public class Run
 		    }
 		public static void showProperties()
 		{
-			for(int i = 0; i< m; i++)
+			for(int i = 0; i< i; i++)
 				{
 					monoply.get(i);
 				}
