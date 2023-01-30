@@ -1,13 +1,23 @@
 
-public  abstract class Cards extends Board
+public  class Cards extends Board
 	{
 
 
 	protected String typeOfCard;
-	protected Cards(String tOC)
+	protected String prompt;
+	protected Cards(String tOC,String p)
 	{
 		typeOfCard=tOC;
+		prompt=p;
 	}
+	protected String getPrompt()
+		{
+			return prompt;
+		}
+	protected void setPrompt(String prompt)
+		{
+			this.prompt = prompt;
+		}
 	protected String getTypeOfCard()
 		{
 			return typeOfCard;
@@ -16,6 +26,9 @@ public  abstract class Cards extends Board
 		{
 			this.typeOfCard = typeOfCard;
 		}
-	protected abstract void changeLocation();
+	protected  void changeLocation()
+	{
+		
+	}
 
 	}
