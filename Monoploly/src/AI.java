@@ -2,15 +2,15 @@
 public class AI extends Player
 	{
 
-	protected AI(String n, int m)
+	protected AI(String n, int m, Board i, int l)
 		{
-			super(n, m);
+			super(n, m, i, l);
 			// TODO Auto-generated constructor stub
 		}
-	static int rollDice;
+
 	public void rollDice()
 		{
-			int rollDice =(int) (Math.random()*6)+1;
+
 		}
 
 	}

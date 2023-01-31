@@ -1,5 +1,5 @@
 
-public class CardPlaceholder
+public class CardPlaceholder extends Board
 	{
 		protected String name;
 		protected CardPlaceholder(String n)

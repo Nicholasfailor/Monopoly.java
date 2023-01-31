@@ -1,11 +1,12 @@
 
-public class Tax
+public class Tax extends Board
 	{
 		protected String name;
 		protected int tax;
 		protected Tax(String n, int t)
 		{
-			
+			name=n;
+			tax=t;
 		}
 		protected String getName()
 			{
