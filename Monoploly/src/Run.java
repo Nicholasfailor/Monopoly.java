@@ -46,12 +46,71 @@ public class Run
 			}
 		private static void showProperty()
 			{
+			String t = monoply.get(rollDice).getType();
+				if(t.equals("Go"))
+					{
+						goOrFree();
+					}
+				else if(t.equals("CardPlaceholder"))
+					{
+						System.out.println("Sorry we haven't implemented it yet.");
+					}
+				else if(t.equals("Tax"))
+					{
+						taxes();
+					}
+				else if(t.equals("RailRoads"))
+					{
+						rails();
+					}
+				else if(t.equals("Jail"))
+					{
+						areYouInJail();
+					}
+				else if(t.equals("Utilities"))
+					{
+						util();
+					}
+			}
+		private static void util()
+			{
 				
+				
+			}
+		private static void areYouInJail()
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		private static void rails()
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		private static void taxes()
+			{
+				// TODO Auto-generated method stub
+				
+			}
+		private static void goOrFree()
+			{
+				String n = monoply.get(rollDice).getName();
+				if(n.equals("Go"))
+					{
+						int mon =players.get(0).getMoney()+200;
+						players.get(0).setMoney(mon);
+					}
+				else
+					{
+						System.out.println("Welcome to "+n);
+					}
 				
 			}
 		private static void rollDice()
 		{
+
 			 rollDice =(int) (Math.random()*6)+1;
+			 players.get(0).setLocation(rollDice);
 		}
 		private static void fillPropeties() throws IOException
 			{
@@ -61,59 +120,56 @@ public class Run
 						String idenifyingBoard = file.next();
 						if(idenifyingBoard.equals("properties"))
 							{
-								String n = file.nextLine();
+								String n = file.next();
 								int c = file.nextInt();;
 								int iR = file.nextInt();
-								String cOG = file.nextLine();
+								String cOG = file.next();
 								int cOHu = file.nextInt();
 								int nOHu=file.nextInt();;
 								int rPHu =file.nextInt();
 								boolean ho=file.nextBoolean();;
 								int cOHo=file.nextInt();;
 								int rPHo = file.nextInt();
-								monoply.add(new Properties (n, c ,iR, cOG, cOHu, nOHu, rPHu, ho, cOHo, rPHo));
+								monoply.add(new Properties ("properties",n, c ,iR, cOG, cOHu, nOHu, rPHu, ho, cOHo, rPHo));
 							}
 						else if(idenifyingBoard.equals("Go"))
 							{
-								String n = file.nextLine();
-								monoply.add(new Go (n));
+								String n = file.next();
+								monoply.add(new Go ("Go",n));
 							}
 						else if(idenifyingBoard.equals("CardPlaceholder"))
 							{
-								String n = file.nextLine();
-								monoply.add(new CardPlaceholder (n));
+								String n = file.next();
+								monoply.add(new CardPlaceholder ("CardPlaceHolder",n));
 							}
 						else if(idenifyingBoard.equals("Tax"))
 							{
-								String n = file.nextLine();
+								String n = file.next();
 								int t= file.nextInt();
-								monoply.add(new Tax (n,t));
+								monoply.add(new Tax ("Tax",n,t));
 							}
 						else if(idenifyingBoard.equals("RailRoads"))
 							{
-								String n = file.nextLine();
+								String n = file.next();
 								int c= file.nextInt();
-								monoply.add(new RailRoads (n,c));
+								monoply.add(new RailRoads ("RailRoads",n,c));
 							}
 						else if(idenifyingBoard.equals("Jail"))
 							{
-								String n = file.nextLine();
+								String n = file.next();
 								boolean jT= file.nextBoolean();
-								monoply.add(new Jail (n,jT));
+								monoply.add(new Jail ("Jail",n,jT));
 							}
 						else if(idenifyingBoard.equals("Utilities"))
 							{
-								String n = file.nextLine();
+								String n = file.next();
 								int c= file.nextInt();
-								monoply.add(new Utilities (n,c));
+								monoply.add(new Utilities ("Utilities",n,c));
 							}
 					}
 				players.add(new Human("Fred",1500,null,0));
 				players.add(new AI("Fred",1500,null,0));
-				for(int i = 0; i< 40; i++)
-					{
-						i = myBoard[i];
-					}
+
 			}
 		public static void greetUser()
 		    {

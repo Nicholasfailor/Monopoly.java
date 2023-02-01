@@ -1,6 +1,7 @@
 
 public class Properties extends Board
 	{
+		protected String type;
 		protected String name;
 		protected int cost;
 		protected int initalRent;
@@ -11,8 +12,9 @@ public class Properties extends Board
 		protected boolean hotel;
 		protected int costOfHotel;
 		protected int rentPerHotel;
-		protected Properties(String n, int c, int iR, String cOG, int cOHu, int nOHu, int rPHu, boolean ho, int cOHo, int rPHo)
+		protected Properties(String t, String n, int c, int iR, String cOG, int cOHu, int nOHu, int rPHu, boolean ho, int cOHo, int rPHo)
 		{
+			type=t;
 			name=n;
 			cost=c;
 			initalRent=iR;
@@ -24,6 +26,14 @@ public class Properties extends Board
 			costOfHotel=cOHo;
 			rentPerHotel=rPHo;
 		}
+		protected String getType()
+			{
+				return type;
+			}
+		protected void setType(String type)
+			{
+				this.type = type;
+			}
 		protected int getInitalRent()
 			{
 				return initalRent;

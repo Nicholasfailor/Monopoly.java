@@ -1,13 +1,23 @@
 
 public class Tax extends Board
 	{
+		protected String type;
 		protected String name;
 		protected int tax;
-		protected Tax(String n, int t)
+		protected Tax(String ty, String n, int t)
 		{
+			type=ty;
 			name=n;
 			tax=t;
 		}
+		protected String getType()
+			{
+				return type;
+			}
+		protected void setType(String type)
+			{
+				this.type = type;
+			}
 		protected String getName()
 			{
 				return name;

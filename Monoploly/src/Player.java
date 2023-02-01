@@ -45,7 +45,7 @@ public abstract class Player
 		{
 			this.money = money;
 		}
-	protected abstract void rollDice();
+
 
 
 	}

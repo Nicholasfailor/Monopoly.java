@@ -1,5 +1,5 @@
 
-public  class Cards extends Board
+public  class Cards 
 	{
 
 

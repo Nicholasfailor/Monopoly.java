@@ -1,10 +1,18 @@
 
 public class Utilities extends Board
 	{
+		protected void setType(String type)
+		{
+			this.type = type;
+		}
+
+
+		protected String type;
 		protected String name;
 		protected int cost;
-		protected Utilities(String n, int c)
+		protected Utilities(String t, String n, int c)
 		{
+			type=t;
 			name=n;
 			cost=c;
 		}
@@ -38,6 +46,18 @@ public class Utilities extends Board
 		{
 			
 		}
+
+
+	protected String getType()
+		{
+			return type;
+		}
+
+
+
+
+
+
 
 
 	}

@@ -8,7 +8,7 @@ public class Human extends Player
 			// TODO Auto-generated constructor stub
 		}
 
-	public void rollDice()
+	public static void rollDice()
 	{
 	}
 

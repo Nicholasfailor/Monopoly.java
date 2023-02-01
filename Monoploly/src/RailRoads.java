@@ -1,14 +1,26 @@
 
 public class RailRoads extends Board
 	{
+		protected String type;
 		protected String name;
 		protected int cost;
-		protected RailRoads(String n, int c)
+		protected RailRoads(String t, String n, int c)
 		{
+			type=t;
 			name=n;
 			cost=c;
 		}
 		
+	protected String getType()
+			{
+				return type;
+			}
+
+		protected void setType(String type)
+			{
+				this.type = type;
+			}
+
 	protected String getName()
 			{
 				return name;

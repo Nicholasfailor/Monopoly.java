@@ -1,6 +1,7 @@
 
 public abstract class Board
 	{
+		protected String type;
 		protected String name;
 		protected int location;
 		protected String owner;
@@ -8,5 +9,8 @@ public abstract class Board
 		{
 			
 		}
+		protected abstract String getType();
+		protected abstract String getName();
+		
 
 	}
