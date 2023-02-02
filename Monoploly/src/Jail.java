@@ -34,6 +34,12 @@ public class Jail extends Board
 		{
 			return jailTime;
 		}
+	@Override
+	protected int getTax()
+		{
+			// TODO Auto-generated method stub
+			return 0;
+		}
 	
 
 	}

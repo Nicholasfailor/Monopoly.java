@@ -22,6 +22,8 @@ public class Run
 			}
 		private static void runBoard()
 			{
+				int mon =players.get(0).getMoney();
+				System.out.println(players.get(0).getName()+" gets "+mon);
 				int choice=0;
 				System.out.println("What do you want to choose");
 				System.out.println("(1) Roll Dice");
@@ -71,6 +73,16 @@ public class Run
 					{
 						util();
 					}
+				else if(t.equals("Properties"))
+					{
+						prop();
+					}
+			}
+		
+		private static void prop()
+			{
+				// TODO Auto-generated method stub
+				
 			}
 		private static void util()
 			{
@@ -79,30 +91,36 @@ public class Run
 			}
 		private static void areYouInJail()
 			{
-				// TODO Auto-generated method stub
+				
 				
 			}
 		private static void rails()
 			{
-				// TODO Auto-generated method stub
+				
 				
 			}
 		private static void taxes()
 			{
-				// TODO Auto-generated method stub
-				
+				String n = monoply.get(rollDice).getName();
+				System.out.println(players.get(0).getName()+" landed on "+n);
+				int t = monoply.get(rollDice).getTax();
+				int mon =players.get(0).getMoney()-t;
+				players.get(0).setMoney(mon);
+				System.out.println(players.get(0).getName()+" loses $"+t);
 			}
 		private static void goOrFree()
 			{
 				String n = monoply.get(rollDice).getName();
 				if(n.equals("Go"))
 					{
+						System.out.println(players.get(0).getName()+" landed on "+n);
+						System.out.println(players.get(0).getName()+" gets $200");
 						int mon =players.get(0).getMoney()+200;
 						players.get(0).setMoney(mon);
 					}
 				else
 					{
-						System.out.println("Welcome to "+n);
+						System.out.println(players.get(0).getName()+" landed on "+n);
 					}
 				
 			}

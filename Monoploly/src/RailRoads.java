@@ -45,6 +45,13 @@ public class RailRoads extends Board
 	{
 		
 	}
+
+	@Override
+	protected int getTax()
+		{
+			// TODO Auto-generated method stub
+			return 0;
+		}
 	
 
 	}

@@ -54,6 +54,14 @@ public class Utilities extends Board
 		}
 
 
+	@Override
+	protected int getTax()
+		{
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+
 
 
 

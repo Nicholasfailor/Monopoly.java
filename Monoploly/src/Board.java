@@ -11,6 +11,7 @@ public abstract class Board
 		}
 		protected abstract String getType();
 		protected abstract String getName();
+		protected abstract int getTax();
 		
 
 	}

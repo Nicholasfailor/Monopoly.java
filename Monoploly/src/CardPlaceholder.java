@@ -24,5 +24,11 @@ public class CardPlaceholder extends Board
 			{
 				this.name = name;
 			}
+		@Override
+		protected int getTax()
+			{
+				// TODO Auto-generated method stub
+				return 0;
+			}
 
 	}

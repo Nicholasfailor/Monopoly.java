@@ -114,5 +114,11 @@ public class Properties extends Board
 			{
 				this.rentPerHotel = rentPerHotel;
 			}
+		@Override
+		protected int getTax()
+			{
+				// TODO Auto-generated method stub
+				return 0;
+			}
 
 	}
