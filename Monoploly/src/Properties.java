@@ -120,5 +120,11 @@ public class Properties extends Board
 				// TODO Auto-generated method stub
 				return 0;
 			}
+		@Override
+		protected void setJailTime(boolean b)
+			{
+				// TODO Auto-generated method stub
+				
+			}
 
 	}

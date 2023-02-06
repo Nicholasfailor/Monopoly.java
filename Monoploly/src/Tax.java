@@ -34,4 +34,16 @@ public class Tax extends Board
 			{
 				this.tax = tax;
 			}
+		protected int getCost()
+			{
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+		protected void setJailTime(boolean b)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+
 	}

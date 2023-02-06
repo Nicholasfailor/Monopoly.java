@@ -30,5 +30,17 @@ public class CardPlaceholder extends Board
 				// TODO Auto-generated method stub
 				return 0;
 			}
+		protected int getCost()
+			{
+				// TODO Auto-generated method stub
+				return 0;
+			}
+
+		protected void setJailTime(boolean b)
+			{
+				// TODO Auto-generated method stub
+				
+			}
+
 
 	}

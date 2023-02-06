@@ -77,27 +77,95 @@ public class Run
 					{
 						prop();
 					}
+				aiRoll();
+				runBoard();
 			}
 		
 		private static void prop()
 			{
-				// TODO Auto-generated method stub
+				String n = monoply.get(rollDice).getName();
+				System.out.println(players.get(0).getName()+" landed on "+n);
+				System.out.println("Do you want to buy "+n);
+				int choice=0;
+				System.out.println("What do you want to buy?");
+				System.out.println("(1) yes");
+				System.out.println("(2) no");
+				choice =userIntInput.nextInt();
+				if(choice==1)
+					{
+						humanOwn.add(monoply.get(rollDice));
+						int c = monoply.get(rollDice).getCost();
+						int mon =players.get(0).getMoney()-c;
+						System.out.println("you have $"+mon);
+						showProperties();
+					}
+				else if(choice==2)
+					{
+						System.out.println(players.get(1).getName()+" did not buy "+ n);
+					}
+				
 				
 			}
 		private static void util()
 			{
-				
-				
+				String n = monoply.get(rollDice).getName();
+				System.out.println(players.get(0).getName()+" landed on "+n);
+				System.out.println("Do you want to buy "+n);
+				int choice=0;
+				System.out.println("What do you want to buy?");
+				System.out.println("(1) yes");
+				System.out.println("(2) no");
+				choice =userIntInput.nextInt();
+				if(choice==1)
+					{
+						humanOwn.add(monoply.get(rollDice));
+						int c = monoply.get(rollDice).getCost();
+						int mon =players.get(0).getMoney()-c;
+						System.out.println("you have $"+mon);
+						showProperties();
+					}
+				else if(choice==2)
+					{
+						System.out.println(players.get(1).getName()+" did not buy "+ n);
+					}
 			}
 		private static void areYouInJail()
 			{
-				
-				
+				String n = monoply.get(rollDice).getName();
+				if(n.equals("Go_To_Jail"))
+					{
+						System.out.println(players.get(0).getName()+" landed on "+n);
+						monoply.get(rollDice).setJailTime(true);
+						System.out.println(players.get(0).getName()+" is now in jail");
+						players.get(0).setLocation(10);
+					}
+				else
+					{
+						System.out.println(players.get(0).getName()+" landed on "+n);
+					}
 			}
 		private static void rails()
 			{
-				
-				
+				String n = monoply.get(rollDice).getName();
+				System.out.println(players.get(0).getName()+" landed on "+n);
+				System.out.println("Do you want to buy "+n);
+				int choice=0;
+				System.out.println("What do you want to buy?");
+				System.out.println("(1) yes");
+				System.out.println("(2) no");
+				choice =userIntInput.nextInt();
+				if(choice==1)
+					{
+						humanOwn.add(monoply.get(rollDice));
+						int c = monoply.get(rollDice).getCost();
+						int mon =players.get(0).getMoney()-c;
+						System.out.println("you have $"+mon);
+						showProperties();
+					}
+				else if(choice==2)
+					{
+						System.out.println(players.get(1).getName()+" did not buy "+ n);
+					}
 			}
 		private static void taxes()
 			{
@@ -204,6 +272,116 @@ public class Run
 				{
 					humanOwn.get(i);
 				}
+		}
+		public static void aiRoll()
+		{
+			rollDice =(int) (Math.random()*6)+1;
+			 players.get(1).setLocation(rollDice);
+			 String t = monoply.get(rollDice).getType();
+				if(t.equals("Go"))
+					{
+						String n = monoply.get(rollDice).getName();
+						if(n.equals("Go"))
+							{
+								System.out.println(players.get(1).getName()+" landed on "+n);
+								System.out.println(players.get(1).getName()+" gets $200");
+								int mon =players.get(1).getMoney()+200;
+								players.get(1).setMoney(mon);
+							}
+						else
+							{
+								System.out.println(players.get(1).getName()+" landed on "+n);
+							}
+					}
+				else if(t.equals("CardPlaceholder"))
+					{
+						System.out.println("Sorry we haven't implemented it yet.");
+					}
+				else if(t.equals("Tax"))
+					{
+						String n = monoply.get(rollDice).getName();
+						System.out.println(players.get(1).getName()+" landed on "+n);
+						int ta = monoply.get(rollDice).getTax();
+						int mon =players.get(1).getMoney()-ta;
+						players.get(1).setMoney(mon);
+						System.out.println(players.get(1).getName()+" loses $"+ta);
+					}
+				else if(t.equals("RailRoads"))
+					{
+						String n = monoply.get(rollDice).getName();
+						System.out.println(players.get(1).getName()+" landed on "+n);
+						System.out.println("Do you want to buy "+n);
+						
+						int c = monoply.get(rollDice).getCost();
+						
+						if(players.get(1).getMoney()>c)
+							{
+								aiOwn.add(monoply.get(rollDice));
+								int mon =players.get(1).getMoney()-c;
+								System.out.println(players.get(1).getName()+" have $"+mon);
+							}
+						else 
+							{
+								System.out.println(players.get(1).getName()+" did not buy "+ n);
+							}
+					}
+				else if(t.equals("Jail"))
+					{
+						String n = monoply.get(rollDice).getName();
+						if(n.equals("Go_To_Jail"))
+							{
+								System.out.println(players.get(1).getName()+" landed on "+n);
+								monoply.get(rollDice).setJailTime(true);
+								System.out.println(players.get(1).getName()+" is now in jail");
+								players.get(1).setLocation(10);
+							}
+						else
+							{
+								System.out.println(players.get(1).getName()+" landed on "+n);
+							}
+					}
+				else if(t.equals("Utilities"))
+					{
+						String n = monoply.get(rollDice).getName();
+						System.out.println(players.get(0).getName()+" landed on "+n);
+						System.out.println("Do you want to buy "+n);
+						
+						int c = monoply.get(rollDice).getCost();
+						
+						if(players.get(1).getMoney()>c)
+							{
+								aiOwn.add(monoply.get(rollDice));
+								int mon =players.get(1).getMoney()-c;
+								System.out.println(players.get(1).getName()+" have $"+mon);
+							}
+						else 
+							{
+								System.out.println(players.get(1).getName()+" did not buy "+ n);
+							}
+					}
+				else if(t.equals("Properties"))
+					{
+						String n = monoply.get(rollDice).getName();
+						System.out.println(players.get(1).getName()+" landed on "+n);
+						System.out.println("Do you want to buy "+n);
+						
+						int c = monoply.get(rollDice).getCost();
+						
+						if(players.get(1).getMoney()>c)
+							{
+								aiOwn.add(monoply.get(rollDice));
+								int mon =players.get(1).getMoney()-c;
+								System.out.println(players.get(1).getName()+" have $"+mon);
+							}
+						else 
+							{
+								System.out.println(players.get(1).getName()+" did not buy "+ n);
+							}
+					}
+				for(int i = 0; i< i; i++)
+					{
+						aiOwn.get(i);
+					}
 		}
 
 	}

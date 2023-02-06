@@ -22,6 +22,10 @@ public class Jail extends Board
 		{
 			this.name = name;
 		}
+	protected boolean isJailTime()
+		{
+			return jailTime;
+		}
 	protected void setJailTime(boolean jailTime)
 		{
 			this.jailTime = jailTime;
@@ -30,16 +34,20 @@ public class Jail extends Board
 		{
 			return name;
 		}
-	protected boolean isJailTime()
-		{
-			return jailTime;
-		}
+
 	@Override
 	protected int getTax()
 		{
 			// TODO Auto-generated method stub
 			return 0;
 		}
+
+	protected int getCost()
+		{
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
 	
 
 	}

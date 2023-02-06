@@ -62,6 +62,14 @@ public class Utilities extends Board
 		}
 
 
+	@Override
+	protected void setJailTime(boolean b)
+		{
+			// TODO Auto-generated method stub
+			
+		}
+
+
 
 
 
