@@ -14,8 +14,9 @@ public class Run
 		public static void main(String[] args) throws IOException
 			{
 				fillPropeties();
+				System.out.println(monoply.size());
 				greetUser();
-				System.out.println("You are at Go");
+				System.out.println("You are at "+monoply.get(0).getName());
 				runBoard();
 				
 
@@ -46,9 +47,16 @@ public class Run
 					}
 				showProperty();
 			}
+		private static void rollDice()
+			{
+
+				 rollDice =(int) (Math.random()*6)+1;
+				 players.get(0).setLocation(players.get(0).getLocation()+rollDice);
+				 System.out.println(players.get(0).getLocation());
+			}
 		private static void showProperty()
 			{
-			String t = monoply.get(rollDice).getType();
+			String t = monoply.get(players.get(0).getLocation()).getType();
 				if(t.equals("Go"))
 					{
 						goOrFree();
@@ -192,19 +200,32 @@ public class Run
 					}
 				
 			}
-		private static void rollDice()
-		{
-
-			 rollDice =(int) (Math.random()*6)+1;
-			 players.get(0).setLocation(rollDice);
-		}
+		
 		private static void fillPropeties() throws IOException
 			{
-				Scanner file = new Scanner(new File( "Classic.txt" ));    
+				int choiceGame=0;
+				System.out.println("What game do you want to play?");
+				System.out.println("(1) Original");
+				System.out.println("(2) Around the World");
+				choiceGame =userIntInput.nextInt();
+				Scanner file = null;
+				if(choiceGame==1)
+					{
+						 file = new Scanner(new File( "Classic.txt" ));
+					}
+				else if(choiceGame==2)
+					{
+						 file = new Scanner(new File( "AroundTheWorld.txt" ));
+					}
+				else
+					{
+						System.out.println("You must choose a game!");
+						fillPropeties();
+					}
 				for(int i = 0; i< 40; i++)
 					{
 						String idenifyingBoard = file.next();
-						if(idenifyingBoard.equals("properties"))
+						if(idenifyingBoard.equals("Properties"))
 							{
 								String n = file.next();
 								int c = file.nextInt();;
@@ -252,6 +273,7 @@ public class Run
 								int c= file.nextInt();
 								monoply.add(new Utilities ("Utilities",n,c));
 							}
+						
 					}
 				players.add(new Human("Fred",1500,null,0));
 				players.add(new AI("Fred",1500,null,0));

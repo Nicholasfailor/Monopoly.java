@@ -1,0 +1,40 @@
+Go Concepción
+Properties Buenos_Aires 60 2 Brown 50 0 15 false 50 250
+CardPlaceholder Soviet_Union
+Properties Bangkok 60 4 Brown 50 0 20 false 50 450
+Tax Las_Vegas 1000
+RailRoads Czech_Republic_RR 200
+Properties Colombo 100 6 Light_Blue 50 0 30 false 50 550
+CardPlaceholder Fairbanks
+Properties Ashgabat 100 6 Light_Blue 50 0 30 false 50 550
+Properties Bamako 120 8 Light_Blue 50 0 40 false 50 600
+Jail Visiting_Zamora false
+Properties Vienna 140 10 Pink 50 0 50 false 50 750
+Utilities China 150
+Properties Port_of_Spain 140 10 Pink 50 0 50 false 50 750
+Properties Kyiv 160 12 Pink 50 0 60 false 50 900
+RailRoads Germany_RR 200
+Properties Colombo 180 14 Orange 50 0 70 false 50 950
+CardPlaceholder Soviet_Union
+Properties Málaga 180 14 Orange 50 0 70 false 50 950
+Properties Pyongyang 200 16 Orange 50 0 80 false 50 1000
+Go Paris
+Properties Lisbon 220 18 Red 50 0 90 false 50 1050
+CardPlaceholder Fairbanks
+Properties Bandar_Seri_Begawan 220 18 Red 50 0 90 false 50 1050
+Properties Stockholm 240 20 Red 50 0 100 false 50 1100
+RailRoads Poland_RR 200
+Properties Vatican_City 260 22 Yellow 50 0 110 false 50 1150
+Properties Kigali 260 22 Yellow 50 0 110 false 50 1150
+Utilities Canada 150
+Properties Copenhagen 280 24 Yellow 50 0 120 false 50 1200
+Jail Go_To_Zamora True
+Properties Thimphu 300 26 Green 50 0 130 false 50 1275
+Properties San_Juan 300 26 Green 50 0 130 false 50 1275
+CardPlaceholder Soviet_Union
+Properties Abuja 320 28 Green 50 0 150 false 50 1400
+RailRoads Italy_Line 200
+CardPlaceholder Fairbanks
+Properties Ljubljana 350 35 Dark_Blue 50 0 175 false 50 1500
+Tax Singapore 100
+Properties Barcelona 400 50 Dark_Blue 50 0 200 false 50 2000
